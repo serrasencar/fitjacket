@@ -15,7 +15,9 @@ GOAL_CHOICES = [
     ('cardio', 'Cardio'),
     ('stretching', 'Stretching'),
     ('plyometrics', 'Plyometrics'),
+    ('powerlifting', 'Powerlifting'),
     ('strongman', 'Strongman'),
+
 ]
         
 class ProfileUpdateForm(forms.ModelForm):
