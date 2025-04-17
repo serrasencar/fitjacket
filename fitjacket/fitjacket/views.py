@@ -25,7 +25,13 @@ def index(request):
 
     if request.user.is_authenticated:
         user = request.user
-        profile, created = UserProfile.objects.get_or_create(user=user)
+        profile, created = UserProfile.objects.get_or_create(
+            user=user,
+            defaults={
+                'skill_level': 'Beginner',
+                'goals': []
+            }
+        )
 
         context = {
             'template_data': template_data,
